@@ -19,6 +19,6 @@ CONTINUE	ADD		R2,R2,#1
 		CMP		R2,#33
 		BNE		LOOP
 		MOV		R6,#SUMA
-		STR		R1,[R6]
+		STRB		R1,[R6]
 		END
 		
