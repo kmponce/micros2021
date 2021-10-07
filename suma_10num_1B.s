@@ -1,0 +1,14 @@
+DATA		DCB		1,2,3,4,5,6,7,8,9,10
+SUMA		DCB		0
+		MOV		R0,#DATA
+		MOV		R1,#0
+		MOV		R2,#0
+LOOP		ADD		R3,R0,R2
+		LDRB		R4,[R3]
+		ADD		R1,R1,R4
+		ADD		R2,R2,#1
+		CMP		R2,#10
+		BNE		LOOP
+		MOV		R6,#SUMA
+		STRB		R1,[R6]
+		END
